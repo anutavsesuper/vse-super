@@ -4,8 +4,8 @@ function setup() {
 }
 
 let ball = {
-  x: 200,
-  y: 300,
+  x: 100,
+  y: 100,
   xspeed: 5,
   yspeed: -4
 };
