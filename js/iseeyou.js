@@ -22,7 +22,7 @@ function draw() {
 
 function display() {
   fill(random(0, 300));
-  ellipse(ball.x, ball.y, 100, 100);
+  ellipse(ball.x, ball.y, 200, 200);
 }
 
 function move() {
