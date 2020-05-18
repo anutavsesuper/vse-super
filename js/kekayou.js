@@ -5,13 +5,13 @@ function setup() {
 
   let ellipse1 = 0;
   let ellipse2 = 0;
-  let ellipsespeed = 15;
+  let ellipsespeed = 6;
   let ellipsespeed2 = 10;
   let rect1 = 0;
   let rect2 = 0;
   let rect3 = 0;
   let rect4 = 0;
-  let rectwer = 8;
+  let rectwer = 2;
   let rectwar = 1;
   let rectwur = 5;
   let rectwor = 1;
@@ -28,31 +28,31 @@ function draw() {
   ellipse(50, 50, d, d);
   ellipse(400, 300, c, c);
 
-  ellipse(ellipse1, 200, 20, 20);
-  if ((ellipse1 > width) ||
+  ellipse(ellipse1, width * 0.1, 50, 50);
+  if ((ellipse1 > width - 25) ||
   (ellipse1 < 0)) {
   ellipsespeed = ellipsespeed * -1;
   }
   ellipse1 += ellipsespeed;
 
-  ellipse(ellipse2, 500, 70, 70);
-  if ((ellipse2 > width) ||
+  ellipse(ellipse2, width * 0.3, 100, 100);
+  if ((ellipse2 > width - 50) ||
   (ellipse2 < 0)) {
   ellipsespeed2 = ellipsespeed2 * -1;
   }
   ellipse2 += ellipsespeed2;
 
-  rect(535, rect1, 30, 500)
-  if(rect1 > 100 ) {
-  rectwer = - 1;
+  rect(height * 1.5, rect1, 120, 320)
+  if(rect1 > height - 320 ) {
+  rectwer = - 2;
   }
   if(rect1 < 0) {
-  rectwer = 1
+  rectwer = 2
   }
   rect1 = rect1 + rectwer;
 
-  rect(rect2, 550, 100, 10)
-  if(rect2 > 500 ) {
+  rect(rect2, width * 0.68, 100, 30)
+  if(rect2 > width - 100 ) {
   rectwar = - 1;
   }
   if(rect2 < 0) {
@@ -60,8 +60,8 @@ function draw() {
   }
   rect2 = rect2 + rectwar;
 
-  rect(rect3, 325, 50, 50)
-  if(rect3 > 550 ) {
+  rect(rect3, width * 0.5, 200, 100)
+  if(rect3 > width - 200 ) {
   rectwur = - 5;
   }
   if(rect3 < 0) {
@@ -69,8 +69,10 @@ function draw() {
   }
   rect3 = rect3 + rectwur;
 
-  rect(20, rect4, 20, 200)
-  if(rect4 > 400 ) {
+  // width * 0.19, height * 0.5
+
+  rect(height * 0.2, rect4, 30, 200)
+  if(rect4 > height - 200 ) {
   rectwor = - 1;
   }
   if(rect4 < 0) {
